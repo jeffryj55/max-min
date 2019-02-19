@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+     <div class="container-fluid text-center bg-primary">
+     	<div class="row">
+     		<div class="col-lg-12 col-md-12 col-sm-12">
+     	<h1 class="title">Max & Min</h1>
+            </div>
+        </div>
+     </div>
+     <div class="container-fluid text-center">
+     	<div class="row">
+     		<div class="col-lg-12 col-sm-12 col-md-12"><br><br>
+     		ENTER 1ST NUMBER  :   <input type="text" id ="Num1" class="Num1"><br><br>
+     		ENTER 2ND NUMBER :	<input type="text" id ="Num2" class="Num2"><br><br>
+     		ENTER 3RD NUMBER  :	<input type="text" id ="Num3" class="Num3"><br><br>
+     		ENTER 4TH NUMBER :	<input type="text" id ="Num4" class="Num4"><br><br>
+     			<button type="button" onclick="myFunction()"  class="btn btn-primary">Max</button>
+     			<button type="button" onclick="myFunction1()"  class="btn btn-primary">Min</button><br><br>
+     			<p id="demo"> </p>
+
+     		</div>
+     	</div>
+     	</div>
+     	<script>
+     		function myFunction(){
+     			var Num1=Number(document.getElementById("Num1").value);
+     			var Num2=Number(document.getElementById("Num2").value);
+     			var Num3=Number(document.getElementById("Num3").value);
+     			var Num4=Number(document.getElementById("Num4").value);
+     			var text=''
+     			 if (Num1 >= Num2 && Num1 >= Num3 && Num1 >= Num4){
+                 text=Num1}
+     else if (Num2 >= Num1 && Num2 >= Num3 && Num2 >= Num4){
+        text=Num2
+    }
+     else if (Num3 >= Num1 && Num3 >= Num2 && Num3 >= Num4){
+        text=Num3}
+    else if (Num4 >= Num2 && Num4 >= Num3 && Num4 >= Num1){
+       text=Num4}
+     			
+     			document.getElementById('demo').innerHTML="<b>largest number from the given value is: </b>"+ text;
+     		}
+     			function myFunction1(){
+     			var Num1=Number(document.getElementById("Num1").value);
+     			var Num2=Number(document.getElementById("Num2").value);
+     			var Num3=Number(document.getElementById("Num3").value);
+     			var Num4=Number(document.getElementById("Num4").value);
+     			var text=''
+
+     			if(Num1<=Num2 && Num1<=Num3 && Num1<=Num4)
+     			{
+     				 text=Num1
+     			}
+     			else if(Num2<=Num1 && Num2<=Num3 && Num2<=Num4)
+     			{
+     				 text=Num2
+     			}
+     			else if(Num3<=Num1 && Num3<=Num2 && Num3<=Num4)
+     			{
+     				text=Num3
+     			}
+     			else if( Num4<=Num1 && Num4<=Num2 && Num4<=Num3)
+     			{
+     				text=Num4
+     			}
+     			document.getElementById('demo').innerHTML= "<b>smallest number from the given value is: </b>"+ text;
+     		}
+
+     </script>
+</body>
+</html>
